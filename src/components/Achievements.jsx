@@ -7,7 +7,7 @@ const Achievements = () => {
 
       <div className="space-y-6 text-gray-300">
         <p>
-          🏆 Smart India Hackathon 2024 - First Prize (Face Liveness Detection)
+          🏆 Smart India Hackathon 2024 - First Prize (Face Liveness Detection)-which detects whether a face is real or fake
         </p>
 
         <p>
