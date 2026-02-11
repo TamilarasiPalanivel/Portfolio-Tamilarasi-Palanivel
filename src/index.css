@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌑 Dark Green-Black Gradient Background */
+body {
+  min-height: 100vh;
+  background: radial-gradient(
+      circle at top left,
+      #0f3d2e 0%,
+      #0b2a22 25%,
+      #071c18 50%,
+      #041311 75%,
+      #020909 100%
+  );
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🌟 Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✨ Glass Card Effect */
+.glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+  border-color: rgba(34, 197, 94, 0.6);
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.35);
+  transform: translateY(-5px);
+}
+
+/* 💚 Glow Button */
+.green-btn {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: black;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.green-btn:hover {
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+  transform: scale(1.05);
+}
+
+/* Section spacing */
+section {
+  padding: 120px 8%;
+}
