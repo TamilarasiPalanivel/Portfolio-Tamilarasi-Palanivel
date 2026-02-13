@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🌑 Dark Green-Black Gradient Background */
 body {
   min-height: 100vh;
   background: radial-gradient(
@@ -26,12 +24,10 @@ body {
   overflow-x: hidden;
 }
 
-/* 🌟 Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* ✨ Glass Card Effect */
 .glass-card {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(18px);
@@ -47,7 +43,6 @@ html {
   transform: translateY(-5px);
 }
 
-/* 💚 Glow Button */
 .green-btn {
   background: linear-gradient(90deg, #22c55e, #16a34a);
   color: black;
@@ -63,7 +58,55 @@ html {
   transform: scale(1.05);
 }
 
-/* Section spacing */
 section {
   padding: 120px 8%;
+}
+
+
+/* ✨ Sparkle Floating Particles */
+.sparkles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.sparkles span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: sparkleMove 15s linear infinite;
+}
+
+/* Different positions */
+.sparkles span:nth-child(1) { left: 10%; animation-duration: 18s; }
+.sparkles span:nth-child(2) { left: 20%; animation-duration: 22s; }
+.sparkles span:nth-child(3) { left: 30%; animation-duration: 16s; }
+.sparkles span:nth-child(4) { left: 40%; animation-duration: 20s; }
+.sparkles span:nth-child(5) { left: 50%; animation-duration: 25s; }
+.sparkles span:nth-child(6) { left: 60%; animation-duration: 19s; }
+.sparkles span:nth-child(7) { left: 70%; animation-duration: 23s; }
+.sparkles span:nth-child(8) { left: 80%; animation-duration: 21s; }
+.sparkles span:nth-child(9) { left: 90%; animation-duration: 17s; }
+.sparkles span:nth-child(10) { left: 15%; animation-duration: 26s; }
+
+@keyframes sparkleMove {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
 }
